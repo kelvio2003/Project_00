@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard de Controle de Alunos</title>
+<!-- Adicione o CSS do Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Adicione o JavaScript do Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Adicione o JavaScript personalizado -->
+<script src="dashboard.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center mt-4 mb-4">Dashboard de Controle de Alunos</h1>
+    </div>
+  </div>
+  
+  <!-- Placar de Salário e Número de Alunos -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card text-white bg-primary mb-3">
+        <div class="card-header">Salário Total</div>
+        <div class="card-body">
+          <h5 class="card-title" id="salario-total">R$ 0,00</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card text-white bg-success mb-3">
+        <div class="card-header">Número de Alunos</div>
+        <div class="card-body">
+          <h5 class="card-title" id="numero-alunos">0</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Formulário de Cadastro -->
+  <div class="row">
+    <div class="col-md-12">
+      <form id="form-cadastro">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required>
+        </div>
+        <div class="form-group">
+          <label for="idade">Idade:</label>
+          <input type="number" class="form-control" id="idade" placeholder="Digite a idade" required>
+        </div>
+        <div class="form-group">
+          <label for="curso">Curso:</label>
+          <input type="text" class="form-control" id="curso" placeholder="Digite o curso" required>
+        </div>
+        <div class="form-group">
+          <label for="data">Data:</label>
+          <input type="date" class="form-control" id="data" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Tabela de Alunos -->
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table" id="tabela-alunos">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Curso</th>
+            <th scope="col">Data</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Os dados dos alunos serão inseridos aqui -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
